@@ -8,6 +8,11 @@
     font-family: "Noto Sans KR", sans-serif;
   }
 
+  body {
+    background-color: theme("colors.gray[50]");
+    color: theme("colors.gray[900]");
+  }
+
   @font-face {
     font-family: "PyeongChangPeace-Bold";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2")
