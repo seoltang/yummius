@@ -10,10 +10,16 @@ module.exports = {
     colors: {
       gray: colors.stone,
       tomato: "#e56353",
+      coral: "#fa8f82",
+      peach: "#ffcdc7",
     },
 
     fontFamily: {
       title: "PyeongChangPeace-Bold",
+    },
+
+    transitionProperty: {
+      box: "margin, padding, border, height",
     },
   },
 };
