@@ -26,6 +26,7 @@ export const Input = ({
         {isRequired || (
           <input
             type="checkbox"
+            name={name}
             checked={isChecked}
             onChange={changeChecked}
             className="h-4 w-4 rounded-full border-gray-300 text-tomato cursor-pointer focus:ring-peach"
@@ -51,6 +52,7 @@ export const Input = ({
           name={name}
           id={name}
           placeholder={example}
+          required={isRequired}
           rows={4}
           className={`${height} block w-full rounded-md border-gray-300 transition-box resize-none focus:border-peach focus:ring-peach placeholder:text-gray-400`}
         />
@@ -60,6 +62,7 @@ export const Input = ({
           name={name}
           id={name}
           placeholder={example}
+          required={isRequired}
           className="block mb-2 w-full rounded-md border-gray-300 focus:border-peach focus:ring-peach placeholder:text-gray-400"
         />
       )}
