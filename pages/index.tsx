@@ -1,4 +1,4 @@
-import { useState } from "react";=
+import { useState } from "react";
 import { Input } from "components/Input";
 import getPrompt from "utils/getPrompt";
 import REVIEW_INPUT_INFO from "constants/reviewInputInfo";
