@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { Input } from "components/Input";
+import { Button } from "components/Button";
 import getPrompt from "utils/getPrompt";
+import create from "utils/api/create";
 import REVIEW_INPUT_INFO from "constants/reviewInputInfo";
-import create from "./api/create";
 
 function Home() {
-  const [result, setResult] = useState("");
+  const [review, setReview] = useState("");
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const prompt = getPrompt(event.target);
 
-    setResult(await create(prompt));
+    setReview(await create(prompt));
   };
 
   return (
@@ -26,12 +27,21 @@ function Home() {
       </section>
 
       <section className="flex flex-col gap-y-3">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className="flex flex-col gap-y-2">
           {REVIEW_INPUT_INFO.map(
-            ({ id, name, description, example, isRequired, isLongAnswer }) => (
+            ({
+              id,
+              name,
+              type,
+              description,
+              example,
+              isRequired,
+              isLongAnswer,
+            }) => (
               <Input
                 key={id}
                 id={id}
+                type={type}
                 name={name}
                 description={description}
                 example={example}
@@ -41,13 +51,17 @@ function Home() {
             )
           )}
 
-          <button type="submit">리뷰 생성하기</button>
-          <button type="reset">다시하기</button>
+          <Button type="submit" className="mt-3">
+            리뷰 생성하기
+          </Button>
+          <Button type="reset" className="mt-3">
+            다시하기
+          </Button>
         </form>
       </section>
 
       <section className="flex flex-col gap-3">
-        {result && <div>{result}</div>}
+        {review && <div>{review}</div>}
         {/* TODO: 복사 버튼 */}
       </section>
     </div>

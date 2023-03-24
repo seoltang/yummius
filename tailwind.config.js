@@ -9,9 +9,11 @@ module.exports = {
   theme: {
     colors: {
       gray: colors.stone,
+      white: colors.white,
       tomato: "#e56353",
       coral: "#fa8f82",
       peach: "#ffcdc7",
+      "dark-tomato": "#cc5949",
     },
 
     fontFamily: {

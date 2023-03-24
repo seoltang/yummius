@@ -1,7 +1,21 @@
 import { ChangeEvent, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  type IconDefinition,
+  faStore,
+  faLocationDot,
+  faUtensils,
+} from "@fortawesome/free-solid-svg-icons";
 import type { ReviewInputInfo } from "types/review";
 
+const icon: { [key: string]: IconDefinition } = {
+  name: faStore,
+  location: faLocationDot,
+  food: faUtensils,
+};
+
 export const Input = ({
+  type,
   name,
   description,
   example,
@@ -23,7 +37,12 @@ export const Input = ({
   return (
     <div className="flex flex-col gap-y-1">
       <div className="flex items-center gap-x-1.5">
-        {isRequired || (
+        {isRequired ? (
+          <FontAwesomeIcon
+            icon={icon[type]}
+            className="w-4 h-4 text-gray-300"
+          />
+        ) : (
           <input
             type="checkbox"
             name={name}
