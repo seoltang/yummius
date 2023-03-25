@@ -8,8 +8,9 @@ module.exports = {
   plugins: [require("@tailwindcss/forms")],
   theme: {
     colors: {
-      gray: colors.stone,
+      transparent: colors.transparent,
       white: colors.white,
+      gray: colors.stone,
       tomato: "#e56353",
       coral: "#fa8f82",
       peach: "#ffcdc7",
