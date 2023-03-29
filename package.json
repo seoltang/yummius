@@ -21,8 +21,7 @@
     "next": "latest",
     "react": "latest",
     "react-cookie": "^4.1.1",
-    "react-dom": "latest",
-    "react-wrap-balancer": "^0.1.5"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

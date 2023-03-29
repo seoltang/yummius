@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React, { ReactNode } from "react";
-import ogImage from "assets/image/og-image.png";
+import ogImage from "public/assets/image/og-image.png";
 
 type LayoutProps = {
   children?: ReactNode;
@@ -10,14 +10,14 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>쩝쩝박사 | ChatGPT 맛집 리뷰 생성기</title>
+        <title>쩝쩝박사 | 맛집 리뷰 생성기 AI</title>
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yummius.vercel.app" />
         <meta property="og:title" content="쩝쩝박사" />
         <meta property="og:image" content={ogImage.src} />
-        <meta property="og:description" content="AI 맛집 리뷰 생성기" />
+        <meta property="og:description" content="맛집 리뷰 생성기 AI" />
         <meta property="og:site_name" content="쩝쩝박사" />
 
         {/* favicon */}
