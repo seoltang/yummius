@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { ReactNode } from "react";
+import ogImage from "assets/image/og-image.png";
 
 type LayoutProps = {
   children?: ReactNode;
@@ -9,7 +10,15 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Head>
-        <title>맛집 리뷰 생성기</title>
+        <title>쩝쩝박사 | ChatGPT 맛집 리뷰 생성기</title>
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        {/* FIXME: <meta property="og:url" content="" /> */}
+        <meta property="og:title" content="쩝쩝박사" />
+        <meta property="og:image" content={ogImage.src} />
+        <meta property="og:description" content="ChatGPT 맛집 리뷰 생성기" />
+        <meta property="og:site_name" content="쩝쩝박사" />
 
         {/* favicon */}
         <link
