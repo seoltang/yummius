@@ -7,7 +7,7 @@ export default async function handler(prompt: string) {
       : 0.7,
     max_tokens: process.env.NEXT_PUBLIC_AI_MAX_TOKENS
       ? parseInt(process.env.NEXT_PUBLIC_AI_MAX_TOKENS)
-      : 1000,
+      : 2048,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
