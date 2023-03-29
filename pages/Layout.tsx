@@ -14,10 +14,10 @@ const Layout = ({ children }: LayoutProps) => {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        {/* FIXME: <meta property="og:url" content="" /> */}
+        <meta property="og:url" content="https://yummius.vercel.app" />
         <meta property="og:title" content="쩝쩝박사" />
         <meta property="og:image" content={ogImage.src} />
-        <meta property="og:description" content="ChatGPT 맛집 리뷰 생성기" />
+        <meta property="og:description" content="AI 맛집 리뷰 생성기" />
         <meta property="og:site_name" content="쩝쩝박사" />
 
         {/* favicon */}
