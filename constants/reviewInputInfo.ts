@@ -53,6 +53,14 @@ const REVIEW_INPUT_INFO: ReviewInputInfo[] = [
   },
   {
     id: 6,
+    type: "cleanliness",
+    name: "청결",
+    example: "예) 깨끗하게 관리되고 있어요.",
+    isRequired: false,
+    isLongAnswer: true,
+  },
+  {
+    id: 7,
     type: "reservation",
     name: "예약 / 웨이팅",
     example: "예) 전화로 예약할 수 있어요. 주말에는 웨이팅이 길어요.",
@@ -60,7 +68,7 @@ const REVIEW_INPUT_INFO: ReviewInputInfo[] = [
     isLongAnswer: true,
   },
   {
-    id: 7,
+    id: 8,
     type: "partner",
     name: "같이 가기 좋은 사람",
     example: "예) 소개팅 장소로 추천해요. 혼밥하는 사람도 꽤 있어요.",
