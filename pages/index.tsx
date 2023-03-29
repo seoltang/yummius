@@ -29,7 +29,7 @@ function Home() {
         } flex flex-col gap-y-3`}
       >
         <header className="flex flex-col mx-auto md:ml-0">
-          <small className="text-right text-gray-600 tracking-[.16rem] leading-3">
+          <small className="text-right text-gray-600 tracking-[.125rem] leading-3">
             ChatGPT
           </small>
           <h1 className="font-title text-4xl text-tomato text-center">

@@ -55,7 +55,7 @@ export const Input = ({
         <div className="flex items-baseline">
           <label
             htmlFor={name}
-            className="block font-medium text-tomato whitespace-nowrap"
+            className="block font-semibold text-tomato whitespace-nowrap"
           >
             {name}
           </label>
