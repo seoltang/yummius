@@ -23,27 +23,25 @@ function Home() {
 
   return (
     <div className="flex flex-col md:flex-row gap-12 justify-center m-8">
-      <section className="md:basis-1/2">
-        <div className="flex flex-col min-h-[50%] border-2 border-gray-300 rounded-xl">
-          {review ? (
-            <div>{review}</div>
-          ) : (
-            <header className="flex flex-col m-auto p-8 text-center">
-              <small className="text-right text-gray-500 tracking-[.16rem] leading-3">
-                ChatGPT
-              </small>
-              <h1 className="font-title text-4xl text-tomato">쩝쩝박사</h1>
-              <h2 className="mt-1 font-medium text-xl text-gray-400">
-                맛집 리뷰 생성기
-              </h2>
-            </header>
-          )}
-          {/* TODO: 복사 버튼 */}
-        </div>
-      </section>
+      <section
+        className={`${
+          review ? "md:basis-1/2" : "md:basis-full"
+        } flex flex-col gap-y-3`}
+      >
+        <header className="flex flex-col mx-auto md:ml-0">
+          <small className="text-right text-gray-600 tracking-[.16rem] leading-3">
+            ChatGPT
+          </small>
+          <h1 className="font-title text-4xl text-tomato text-center">
+            쩝쩝박사
+          </h1>
+        </header>
 
-      <section className="md:basis-1/2 flex flex-col gap-y-3">
-        <form onSubmit={onSubmit} className="flex flex-col gap-y-2">
+        <div className="pt-4 pb-2 break-keep">
+          맛집 리뷰에 필요한 정보를 입력하고 ChatGPT로 리뷰를 생성해 보세요.
+        </div>
+
+        <form id="review" onSubmit={onSubmit} className="flex flex-col gap-y-2">
           {REVIEW_INPUT_INFO.map(
             ({
               id,
@@ -67,19 +65,30 @@ function Home() {
             )
           )}
 
-          <Button type="submit" className="mt-8">
+          <Button type="submit" className="mt-6">
             리뷰 생성하기
-          </Button>
-          <Button
-            type="reset"
-            onClick={onReset}
-            isOutlined={true}
-            className="mt-3"
-          >
-            다시하기
           </Button>
         </form>
       </section>
+
+      {review && (
+        <section className="flex flex-col items-center justify-between md:basis-1/2">
+          <div className="w-full p-6 md:p-8 rounded-xl bg-gradient-to-br from-light-yellow to-coral shadow-lg whitespace-pre-wrap">
+            {review.trim()}
+            {/* TODO: 복사 버튼 */}
+          </div>
+
+          <Button
+            type="reset"
+            form="review"
+            onClick={onReset}
+            isOutlined={true}
+            className="mt-10"
+          >
+            다시하기
+          </Button>
+        </section>
+      )}
     </div>
   );
 }

@@ -73,7 +73,7 @@ export const Input = ({
           placeholder={example}
           required={isRequired}
           rows={4}
-          className={`${height} block w-full rounded-md border-gray-300 transition-box resize-none focus:border-peach focus:ring-peach placeholder:text-gray-400`}
+          className={`${height} block w-full rounded-md border-none shadow-inner shadow-gray-200 transition-box resize-none focus:ring-2 focus:ring-peach placeholder:text-gray-400`}
         />
       ) : (
         <input
@@ -82,7 +82,7 @@ export const Input = ({
           id={name}
           placeholder={example}
           required={isRequired}
-          className="block mb-2 w-full rounded-md border-gray-300 focus:border-peach focus:ring-peach placeholder:text-gray-400"
+          className="block mb-2 w-full rounded-md border-none shadow-inner shadow-gray-200 focus:ring-2 focus:ring-peach placeholder:text-gray-400"
         />
       )}
     </div>

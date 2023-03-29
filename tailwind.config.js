@@ -12,9 +12,12 @@ module.exports = {
       white: colors.white,
       gray: colors.stone,
       tomato: "#e56353",
-      coral: "#fa8f82",
+      coral: "#ffaaa0",
       peach: "#ffcdc7",
       "dark-tomato": "#cc5949",
+      yellow: "#fcd462",
+      "light-yellow": "#ffe597",
+      green: "#44c4a1",
     },
 
     fontFamily: {
