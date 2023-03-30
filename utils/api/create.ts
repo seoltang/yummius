@@ -31,5 +31,5 @@ export default async function handler(prompt: string) {
     return `OpenAI API 에러가 발생했습니다. ${response.error.message}`;
   }
 
-  return response.choices[0].text;
+  return response.choices[0].text.trim();
 }

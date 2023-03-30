@@ -6,15 +6,17 @@ import REVIEW_INPUT_INFO from "constants/reviewInputInfo";
 
 interface FormProps {
   setReview: React.Dispatch<React.SetStateAction<string>>;
+  setIsReadOnly: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Form({ setReview }: FormProps) {
+function Form({ setReview, setIsReadOnly }: FormProps) {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const prompt = getPrompt(event.target);
 
     setReview(await create(prompt));
+    setIsReadOnly(true);
   };
 
   return (

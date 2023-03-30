@@ -5,6 +5,7 @@ import Review from "components/Review";
 
 function Home() {
   const [review, setReview] = useState("");
+  const [isReadOnly, setIsReadOnly] = useState(true);
 
   const onReset = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (!confirm("입력한 글이 모두 지워집니다. 계속하시겠습니까?"))
@@ -31,12 +32,17 @@ function Home() {
           맛집 리뷰에 필요한 정보를 입력하고 ChatGPT로 리뷰를 생성해 보세요.
         </div>
 
-        <Form setReview={setReview} />
+        <Form setReview={setReview} setIsReadOnly={setIsReadOnly} />
       </section>
 
       {review && (
         <section className="flex flex-col items-center justify-between md:basis-1/2">
-          <Review review={review} />
+          <Review
+            review={review}
+            setReview={setReview}
+            isReadOnly={isReadOnly}
+            setIsReadOnly={setIsReadOnly}
+          />
 
           <Button
             type="reset"
