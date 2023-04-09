@@ -23,7 +23,7 @@ function Home() {
           <small className="text-right text-gray-600 tracking-[.125rem] leading-3">
             ChatGPT
           </small>
-          <h1 className="font-title text-4xl text-tomato text-center">
+          <h1 className="font-title text-4xl text-center bg-clip-text text-transparent bg-gradient-to-r from-dark-yellow to-tomato">
             쩝쩝박사
           </h1>
         </header>
@@ -49,7 +49,7 @@ function Home() {
             form="review"
             onClick={onReset}
             isOutlined={true}
-            className="mt-10"
+            className="mt-12"
           >
             다시하기
           </Button>

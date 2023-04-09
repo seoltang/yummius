@@ -21,4 +21,9 @@
     font-weight: 700;
     font-style: normal;
   }
+
+  .text-shadow {
+    text-shadow: theme("colors.tomato") 1px 1px 2px,
+      theme("colors.yellow") -1px -1px 2px, theme("colors.tomato") 0px 0px 2px;
+  }
 }
