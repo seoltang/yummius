@@ -45,6 +45,7 @@ export const Input = ({
         ) : (
           <input
             type="checkbox"
+            id={name}
             name={name}
             checked={isChecked}
             onChange={changeChecked}
@@ -69,7 +70,6 @@ export const Input = ({
       {isLongAnswer ? (
         <textarea
           name={name}
-          id={name}
           placeholder={example}
           required={isRequired}
           rows={4}
@@ -79,7 +79,6 @@ export const Input = ({
         <input
           type="text"
           name={name}
-          id={name}
           placeholder={example}
           required={isRequired}
           className="block mb-2 w-full rounded-md border-none shadow-inner shadow-gray-200/75 focus:ring-2 focus:ring-peach placeholder:text-gray-400"
