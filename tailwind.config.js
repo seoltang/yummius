@@ -17,7 +17,9 @@ module.exports = {
       "dark-tomato": "#cc5949",
       yellow: "#fcd462",
       "light-yellow": "#ffe597",
+      "dark-yellow": "#f5b505",
       green: "#44c4a1",
+      success: "#1A7D36",
     },
 
     fontFamily: {
