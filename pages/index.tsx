@@ -5,6 +5,7 @@ import Review from "components/Review";
 
 function Home() {
   const [review, setReview] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [isReadOnly, setIsReadOnly] = useState(true);
 
   const onReset = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -32,7 +33,12 @@ function Home() {
           맛집 리뷰에 필요한 정보를 입력하고 ChatGPT로 리뷰를 생성해 보세요.
         </div>
 
-        <Form setReview={setReview} setIsReadOnly={setIsReadOnly} />
+        <Form
+          setReview={setReview}
+          setIsReadOnly={setIsReadOnly}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+        />
       </section>
 
       {review && (
