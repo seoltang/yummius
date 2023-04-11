@@ -12,7 +12,7 @@ function Home() {
   const loadingMessage = useLoadingMessage(isLoading);
 
   const onReset = (event: React.MouseEvent<HTMLButtonElement>) => {
-    if (confirm("입력하신 내용과 리뷰가 모두 지워집니다. 계속하시겠습니까?")) {
+    if (confirm("입력한 내용과 리뷰가 모두 지워집니다. 계속하시겠습니까?")) {
       setReview("");
       event.currentTarget.form?.reset();
     }
