@@ -49,6 +49,7 @@ export const Input = ({
             name={name}
             checked={isChecked}
             onChange={changeChecked}
+            autoComplete="false"
             className="h-4 w-4 rounded-full border-gray-300 text-tomato cursor-pointer focus:ring-peach"
           />
         )}
@@ -73,6 +74,7 @@ export const Input = ({
           placeholder={example}
           required={isRequired}
           rows={4}
+          autoComplete="false"
           className={`${height} block w-full rounded-md border-none shadow-inner shadow-gray-200/75 transition-box resize-none focus:ring-2 focus:ring-peach placeholder:text-gray-400`}
         />
       ) : (
@@ -81,6 +83,7 @@ export const Input = ({
           name={name}
           placeholder={example}
           required={isRequired}
+          autoComplete="false"
           className="block mb-2 w-full rounded-md border-none shadow-inner shadow-gray-200/75 focus:ring-2 focus:ring-peach placeholder:text-gray-400"
         />
       )}
