@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 import Tooltip from "@mui/joy/Tooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,12 @@ interface ReviewProps {
 
 function Review({ review, setReview, isReadOnly, setIsReadOnly }: ReviewProps) {
   const [isCopied, setIsCopied] = useState(false);
+
+  const reviewRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    reviewRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     if (!isCopied) return;
@@ -42,7 +48,10 @@ function Review({ review, setReview, isReadOnly, setIsReadOnly }: ReviewProps) {
   };
 
   return (
-    <div className="w-full p-6 md:px-8 md:pb-8 rounded-xl bg-gradient-to-br from-light-yellow to-coral shadow-lg">
+    <div
+      ref={reviewRef}
+      className="w-full p-6 md:px-8 md:pb-8 rounded-xl bg-gradient-to-br from-light-yellow to-coral shadow-lg"
+    >
       <div className="flex justify-between gap-x-3 pb-3 leading-[0] text-white">
         <h3 className="text-2xl font-title text-white text-shadow">쩝쩝리뷰</h3>
 
