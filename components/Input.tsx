@@ -45,6 +45,7 @@ export const Input = ({
         ) : (
           <input
             type="checkbox"
+            id={name}
             name={name}
             checked={isChecked}
             onChange={changeChecked}
@@ -55,7 +56,7 @@ export const Input = ({
         <div className="flex items-baseline">
           <label
             htmlFor={name}
-            className="block font-medium text-tomato whitespace-nowrap"
+            className="block font-semibold text-tomato whitespace-nowrap"
           >
             {name}
           </label>
@@ -69,20 +70,18 @@ export const Input = ({
       {isLongAnswer ? (
         <textarea
           name={name}
-          id={name}
           placeholder={example}
           required={isRequired}
           rows={4}
-          className={`${height} block w-full rounded-md border-none shadow-inner shadow-gray-200 transition-box resize-none focus:ring-2 focus:ring-peach placeholder:text-gray-400`}
+          className={`${height} block w-full rounded-md border-none shadow-inner shadow-gray-200/75 transition-box resize-none focus:ring-2 focus:ring-peach placeholder:text-gray-400`}
         />
       ) : (
         <input
           type="text"
           name={name}
-          id={name}
           placeholder={example}
           required={isRequired}
-          className="block mb-2 w-full rounded-md border-none shadow-inner shadow-gray-200 focus:ring-2 focus:ring-peach placeholder:text-gray-400"
+          className="block mb-2 w-full rounded-md border-none shadow-inner shadow-gray-200/75 focus:ring-2 focus:ring-peach placeholder:text-gray-400"
         />
       )}
     </div>

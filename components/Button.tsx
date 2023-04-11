@@ -1,8 +1,9 @@
 interface ButtonProps {
-  children: string;
+  children: string | JSX.Element;
   type: "button" | "submit" | "reset";
   form?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
   className?: string;
   isOutlined?: boolean;
 }
@@ -15,7 +16,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`self-center w-full md:max-w-sm py-3 rounded-full font-semibold border-2 border-tomato ${
+      className={`self-center w-full md:max-w-sm py-3 rounded-full font-semibold border-2 border-tomato shadow-md ${
         isOutlined
           ? "bg-transparent text-tomato active:bg-gray-100"
           : "bg-tomato text-white active:bg-dark-tomato active:border-dark-tomato"
