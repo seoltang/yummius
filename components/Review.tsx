@@ -25,7 +25,7 @@ function Review({ review, setReview, isReadOnly, setIsReadOnly }: ReviewProps) {
 
     const copyTimeout = setTimeout(() => {
       setIsCopied(false);
-    }, 1000);
+    }, 1200);
 
     return () => clearTimeout(copyTimeout);
   }, [isCopied]);
@@ -56,27 +56,20 @@ function Review({ review, setReview, isReadOnly, setIsReadOnly }: ReviewProps) {
         <h3 className="text-2xl font-title text-white text-shadow">쩝쩝리뷰</h3>
 
         <div className="flex gap-x-3">
-          <Tooltip
-            title={isReadOnly ? "편집" : "편집 완료"}
-            size="sm"
-            placement="top"
-            arrow
+          <button
+            onClick={edit}
+            className="active:text-tomato lg:hover:text-tomato"
           >
-            <button
-              onClick={edit}
-              className="active:text-tomato lg:hover:text-tomato"
-            >
-              <FontAwesomeIcon icon={isReadOnly ? faPen : faCheck} size="1x" />
-            </button>
-          </Tooltip>
+            <FontAwesomeIcon icon={isReadOnly ? faPen : faCheck} size="1x" />
+          </button>
 
           <Tooltip
-            title={isCopied ? "복사 완료!" : "복사"}
-            leaveDelay={isCopied ? 800 : 0}
-            color={isCopied ? "success" : "neutral"}
+            title={"복사 완료!"}
+            color="success"
             size="sm"
             placement="top"
             arrow
+            open={isCopied}
           >
             <button
               onClick={copy}
