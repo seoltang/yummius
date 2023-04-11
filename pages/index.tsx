@@ -15,6 +15,8 @@ function Home() {
     if (confirm("입력한 내용과 리뷰가 모두 지워집니다. 계속하시겠습니까?")) {
       setReview("");
       event.currentTarget.form?.reset();
+
+      scrollTo(0, 0);
     }
   };
 
