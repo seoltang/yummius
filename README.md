@@ -1,10 +1,10 @@
 # 쩝쩝박사
 
+**맛집 리뷰 생성기 ChatGPT**
+
 > 서비스 바로가기: [https://yummius.vercel.app](https://yummius.vercel.app)
 
 ## 🍽 About Project
-
-> **맛집 리뷰 생성기 ChatGPT**
 
 맛집전국시대. 많은 사람들이 저마다의 방법으로 맛집 리뷰를 기록합니다. 하지만 꾸준히 글을 쓴다는 것은 꽤나 시간과 노력을 요하는 일이죠.
 
