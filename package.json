@@ -1,5 +1,7 @@
 {
-  "repository": "https://github.com/seoltang/restaurant-review-creator.git",
+  "name": "yummius",
+  "version": "1.0.0",
+  "repository": "https://github.com/seoltang/yummius.git",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -19,7 +21,6 @@
     "@sentry/nextjs": "^7.47.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
-    "@vercel/analytics": "^0.1.6",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "next": "latest",

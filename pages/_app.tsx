@@ -3,7 +3,6 @@ import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { Analytics } from "@vercel/analytics/react";
 import * as gtag from "utils/gtag";
 import Layout from "./Layout";
 import ogImage from "public/assets/image/og-image.png";
@@ -78,7 +77,6 @@ function App({ Component, pageProps }: AppProps) {
 
       <Layout>
         <Component {...pageProps} />
-        <Analytics />
       </Layout>
     </>
   );
