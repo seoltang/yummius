@@ -28,14 +28,14 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>쩝쩝박사 | 맛집 리뷰 생성기 AI</title>
+        <title>쩝쩝박사 | 맛집 리뷰 생성기 ChatGPT</title>
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yummius.vercel.app" />
         <meta property="og:title" content="쩝쩝박사" />
         <meta property="og:image" content={ogImage.src} />
-        <meta property="og:description" content="맛집 리뷰 생성기 AI" />
+        <meta property="og:description" content="맛집 리뷰 생성기 ChatGPT" />
         <meta property="og:site_name" content="쩝쩝박사" />
 
         {/* favicon */}
@@ -57,10 +57,18 @@ function App({ Component, pageProps }: AppProps) {
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
+
+        {/* Google Adsense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1041677560115251"
+          crossOrigin="anonymous"
+        />
       </Head>
 
       {/* Google tag (gtag.js) - Google Analytics */}
       <Script
+        async
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
