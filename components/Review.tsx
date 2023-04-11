@@ -17,11 +17,11 @@ function Review({ review, setReview, isReadOnly, setIsReadOnly }: ReviewProps) {
   useEffect(() => {
     if (!isCopied) return;
 
-    const copyTimeOut = setTimeout(() => {
+    const copyTimeout = setTimeout(() => {
       setIsCopied(false);
     }, 1000);
 
-    return () => clearTimeout(copyTimeOut);
+    return () => clearTimeout(copyTimeout);
   }, [isCopied]);
 
   const onInput = (event: FormEvent<HTMLTextAreaElement>) => {

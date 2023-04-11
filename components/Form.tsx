@@ -26,12 +26,17 @@ function Form({
     const prompt = getPrompt(event.target);
     setReview(await create(prompt));
 
-    setIsLoading(false);
     setIsReadOnly(true);
+    setIsLoading(false);
   };
 
   return (
-    <form id="review" onSubmit={onSubmit} className="flex flex-col gap-y-2">
+    <form
+      id="review"
+      name="review"
+      onSubmit={onSubmit}
+      className="flex flex-col gap-y-2"
+    >
       {REVIEW_INPUT_INFO.map(
         ({
           id,
