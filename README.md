@@ -1,57 +1,26 @@
-# restaurant-review-creator
+# 쩝쩝박사
 
-## AI Chat GPT-3 example
+**맛집 리뷰 생성기 ChatGPT**
 
-This example shows how to implement a simple chat bot using Next.js, API Routes, and [OpenAI API](https://beta.openai.com/docs/api-reference/completions/create).
+> 서비스 바로가기: [https://yummius.vercel.app](https://yummius.vercel.app)
 
-### Components
+![yummius-preview](https://user-images.githubusercontent.com/91963656/231276127-381eb35f-192d-4489-b45f-084aa202cb9c.png)
 
-- Next.js
-- OpenAI API (REST endpoint)
-- API Routes (Edge runtime)
+## 🍽 About Project
 
-## How to Use
+맛집전국시대. 많은 사람들이 저마다의 방법으로 맛집 리뷰를 기록합니다. 하지만 꾸준히 글을 쓴다는 것은 꽤나 시간과 노력을 요하는 일이죠.
 
-You can choose from one of the following two methods to use this repository:
+**ChatGPT와 함께 손쉽게 맛집 리뷰를 작성해 보세요.** 맛집에 대한 필수 정보 몇 가지만 입력하면, ChatGPT가 완성된 글로 바꿔 드립니다.
 
-### One-Click Deploy
+글에서 마음에 들지 않는 부분은 즉시 수정할 수도 있어요. 완성된 리뷰를 복사해서 블로그, 다이어리, SNS 등 어디든 활용해 보세요.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/ai-chatgpt&project-name=ai-chatgpt&repository-name=ai-chatgpt&env=OPENAI_API_KEY)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## 🪄 Installation
 
 ```bash
-npx create-next-app --example https://github.com/vercel/examples/tree/main/solutions/ai-chatgpt
-# or
-yarn create next-app --example https://github.com/vercel/examples/tree/main/solutions/ai-chatgpt
-```
-
-#### Set up environment variables
-
-Rename [`.env.example`](.env.example) to `.env.local`:
-
-```bash
-cp .env.example .env.local
-```
-
-then, update `OPENAI_API_KEY` with your [OpenAI](https://beta.openai.com/account/api-keys) secret key.
-
-Next, run Next.js in development mode:
-
-```bash
-npm install
-npm run dev
-
-# or
-
+nvm use
 yarn
 yarn dev
 ```
 
-The app should be up and running at http://localhost:3000.
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=edge-middleware-eap) ([Documentation](https://nextjs.org/docs/deployment)).
+## 🛠 Stack
+<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white"/> <img src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white"/> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat-square&logo=Tailwind CSS&logoColor=white"/>
