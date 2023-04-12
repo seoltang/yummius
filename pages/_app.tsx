@@ -38,6 +38,12 @@ function App({ Component, pageProps }: AppProps) {
         <meta property="og:description" content="맛집 리뷰 생성기 ChatGPT" />
         <meta property="og:site_name" content="쩝쩝박사" />
 
+        {/* Google Search Console */}
+        <meta
+          name="google-site-verification"
+          content="26qfrWF_xbIF2JBg0Kn7nKhDI7vBMo-G4pISPB8oBU0"
+        />
+
         {/* favicon */}
         <link
           rel="apple-touch-icon"
