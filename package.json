@@ -1,5 +1,7 @@
 {
-  "repository": "https://github.com/seoltang/restaurant-review-creator.git",
+  "name": "yummius",
+  "version": "1.0.0",
+  "repository": "https://github.com/seoltang/yummius.git",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -16,9 +18,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/joy": "^5.0.0-alpha.73",
+    "@sentry/nextjs": "^7.47.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
-    "@vercel/analytics": "^0.1.6",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "next": "latest",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "@types/gtag.js": "^0.0.12",
     "@types/node": "^17",
     "@types/react": "latest",
     "autoprefixer": "^10.4.13",

@@ -1,8 +1,9 @@
 interface ButtonProps {
-  children: string;
+  children: string | JSX.Element;
   type: "button" | "submit" | "reset";
   form?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
   className?: string;
   isOutlined?: boolean;
 }
