@@ -7,22 +7,35 @@
   },
   "extends": [
     "next/core-web-vitals",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "airbnb/hooks",
+    "airbnb",
     "airbnb-typescript",
-    "prettier"
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@next/next/recommended",
+    "plugin:prettier/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "sourceType": "module",
     "project": ["tsconfig.json"]
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "import"],
   "rules": {
+    "import/extensions": [
+      "error",
+      {
+        "tsx": "never",
+        "ts": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off"
   }
