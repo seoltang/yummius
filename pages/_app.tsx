@@ -29,19 +29,53 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>쩝쩝박사 | 맛집 리뷰 생성기 ChatGPT</title>
+        <meta
+          name="description"
+          content="맛집 리뷰에 필요한 정보를 입력하고 ChatGPT로 리뷰를 생성해 보세요."
+        ></meta>
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yummius.vercel.app" />
-        <meta property="og:title" content="쩝쩝박사" />
+        <meta
+          property="og:title"
+          content="쩝쩝박사 | 맛집 리뷰 생성기 ChatGPT"
+        />
         <meta property="og:image" content={ogImage.src} />
-        <meta property="og:description" content="맛집 리뷰 생성기 ChatGPT" />
-        <meta property="og:site_name" content="쩝쩝박사" />
+        <meta
+          property="og:description"
+          content="맛집 리뷰에 필요한 정보를 입력하고 ChatGPT로 리뷰를 생성해 보세요."
+        />
+        <meta
+          property="og:site_name"
+          content="쩝쩝박사 | 맛집 리뷰 생성기 ChatGPT"
+        />
+
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:title"
+          content="쩝쩝박사 | 맛집 리뷰 생성기 ChatGPT"
+        />
+        <meta
+          name="twitter:description"
+          content="맛집 리뷰에 필요한 정보를 입력하고 ChatGPT로 리뷰를 생성해 보세요."
+        />
+        <meta name="twitter:image" content={ogImage.src} />
+        <meta
+          name="twitter:domain"
+          content="쩝쩝박사 | 맛집 리뷰 생성기 ChatGPT"
+        />
 
         {/* Google Search Console */}
         <meta
           name="google-site-verification"
           content="26qfrWF_xbIF2JBg0Kn7nKhDI7vBMo-G4pISPB8oBU0"
+        />
+
+        {/* Naver Search Advisor */}
+        <meta
+          name="naver-site-verification"
+          content="507df26206d79d39714a929aaff2cc4ca3beb901"
         />
 
         {/* favicon */}
