@@ -44,6 +44,12 @@ function App({ Component, pageProps }: AppProps) {
           content="26qfrWF_xbIF2JBg0Kn7nKhDI7vBMo-G4pISPB8oBU0"
         />
 
+        {/* Naver Search Advisor */}
+        <meta
+          name="naver-site-verification"
+          content="507df26206d79d39714a929aaff2cc4ca3beb901"
+        />
+
         {/* favicon */}
         <link
           rel="apple-touch-icon"
